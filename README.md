@@ -1,4 +1,4 @@
-## Adding a random sample of store items to cart and verifyihng price consistency
+## Adding a random sample of store items to cart and verifying price consistency
 
 This is a demo test automation script using Robot Framework. It showcases a few interesting techniques:
 
