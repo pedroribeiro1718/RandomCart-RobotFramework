@@ -8,6 +8,10 @@ Library        SeleniumLibrary                                        # Bibliote
 Resource      ../resources/carrinho-de-compras.locators.robot         # Locators
 Resource      ../resources/carrinho-de-compras.resource               # Helper functions
 
+*** Variables ***
+${FIRSTNAME}    Pedro
+${LASTNAME}     Ribeiro
+${ZIPCODE}      01111000
 
 *** Test Cases ***
 Scenario: Adicionar produtos ao carrinho de compras e finalizar compra
@@ -17,11 +21,6 @@ Scenario: Adicionar produtos ao carrinho de compras e finalizar compra
     When Eu confirmo meus dados e solicito a realização da compra
     Then Eu verifico se o valor total corresponde aos subtotais de cada produto, mais taxas
     Then Após a confirmação final, eu vejo uma mensagem de sucesso informando que a compra foi realizada
-
-*** Variables ***
-${FIRSTNAME}    Pedro
-${LASTNAME}     Ribeiro
-${ZIPCODE}      8806355
 
 *** Keywords ***
 
