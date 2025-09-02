@@ -8,9 +8,9 @@ This is a demo test automation script using Robot Framework. It showcases a few 
 
 ## Authorship
 
-- Developed in collaboration with [Coti Informática](http://cotiinformatica.com.br).
-- Uses https://www.saucedemo.com/v1/inventory.html as a test automation playground.
+- Developed in collaboration with [Coti Informática](http://cotiinformatica.com.br)
+- Uses https://www.saucedemo.com/v1/inventory.html as a test automation playground
 
 ## To do
 
-- Fully translate to English.
+- Fully translate to English
