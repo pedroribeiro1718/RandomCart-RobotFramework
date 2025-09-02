@@ -1,490 +1,541 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.7 on linux)" generated="2025-09-02T16:36:45.411940" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3.2 (Python 3.13.7 on linux)" generated="2025-09-02T17:00:23.236395" rpa="false" schemaversion="5">
 <suite id="s1" name="Carrinho-De-Compras" source="/home/generic/data/code/courses/coti/test-automation_2025-08/robot-framework/aula06/tests/carrinho-de-compras.robot">
 <test id="s1-t1" name="Scenario: Adicionar produtos ao carrinho de compras e finalizar compra" line="13">
 <kw name="Given Eu estou na página inicial da loja virtual">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-09-02T16:36:45.471314" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/v1/inventory.html'.</msg>
+<msg time="2025-09-02T17:00:23.294879" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/v1/inventory.html'.</msg>
 <arg>${URL_BASE}</arg>
 <arg>${BROWSER_NAME}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-09-02T16:36:45.471143" elapsed="0.765462"/>
+<status status="PASS" start="2025-09-02T17:00:23.294713" elapsed="0.611517"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-09-02T16:36:46.236833" elapsed="0.011958"/>
+<status status="PASS" start="2025-09-02T17:00:23.906477" elapsed="0.011866"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-09-02T16:36:46.390193" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/01_pagina_inicial.png"&gt;&lt;img src="screenshots/01_pagina_inicial.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-09-02T17:00:24.071847" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/01_pagina_inicial.png"&gt;&lt;img src="screenshots/01_pagina_inicial.png" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>screenshots/01_pagina_inicial.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-09-02T16:36:46.249068" elapsed="0.141311"/>
+<status status="PASS" start="2025-09-02T17:00:23.918563" elapsed="0.153475"/>
 </kw>
-<status status="PASS" start="2025-09-02T16:36:45.470704" elapsed="0.919761"/>
+<status status="PASS" start="2025-09-02T17:00:23.294286" elapsed="0.777847"/>
 </kw>
 <kw name="And Eu adiciono uma amostra aleatória de produtos ao meu carrinho">
 <kw name="Obter Amostra Aleatória de Itens de Inventário" owner="carrinho-de-compras">
 <kw name="Contar Itens de Inventário" owner="carrinho-de-compras">
 <kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2025-09-02T16:36:46.396990" level="INFO">${items} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="a4e00d99ea953b0cea388c7fac3c268c", element="f.BA297BB305F644908ED99F24167A424D.d.47797383C19A929861707CAE13FCDB6B.e.34")&gt;, &lt;selenium.webdriv...</msg>
+<msg time="2025-09-02T17:00:24.076969" level="INFO">${items} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="8b0ca5cd733e47dcbd899ba0d6bf191b", element="f.7EEAE3423D45CD5F619A8AC2FA79023F.d.5424AB6C0E909460EBCE46C9A0A23595.e.32")&gt;, &lt;selenium.webdriv...</msg>
 <var>${items}</var>
 <arg>${INVENTORY_ITEMS}</arg>
 <doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2025-09-02T16:36:46.391522" elapsed="0.005686"/>
+<status status="PASS" start="2025-09-02T17:00:24.072784" elapsed="0.004404"/>
 </kw>
 <kw name="Get Length" owner="BuiltIn">
-<msg time="2025-09-02T16:36:46.397508" level="INFO">Length is 6.</msg>
-<msg time="2025-09-02T16:36:46.397582" level="INFO">${count} = 6</msg>
+<msg time="2025-09-02T17:00:24.077443" level="INFO">Length is 6.</msg>
+<msg time="2025-09-02T17:00:24.077515" level="INFO">${count} = 6</msg>
 <var>${count}</var>
 <arg>${items}</arg>
 <doc>Returns and logs the length of the given item as an integer.</doc>
-<status status="PASS" start="2025-09-02T16:36:46.397357" elapsed="0.000259"/>
+<status status="PASS" start="2025-09-02T17:00:24.077318" elapsed="0.000231"/>
 </kw>
 <return>
 <value>${count}</value>
-<status status="PASS" start="2025-09-02T16:36:46.397666" elapsed="0.000066"/>
+<status status="PASS" start="2025-09-02T17:00:24.077598" elapsed="0.000062"/>
 </return>
-<msg time="2025-09-02T16:36:46.397828" level="INFO">${max} = 6</msg>
+<msg time="2025-09-02T17:00:24.077746" level="INFO">${max} = 6</msg>
 <var>${max}</var>
-<status status="PASS" start="2025-09-02T16:36:46.391334" elapsed="0.006531"/>
+<status status="PASS" start="2025-09-02T17:00:24.072667" elapsed="0.005121"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-09-02T16:36:46.398153" level="INFO">${sample_size} = 3</msg>
+<msg time="2025-09-02T17:00:24.078083" level="INFO">${sample_size} = 4</msg>
 <var>${sample_size}</var>
 <arg>random.choice(range(1,${max}))</arg>
 <arg>random</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-09-02T16:36:46.397936" elapsed="0.000259"/>
+<status status="PASS" start="2025-09-02T17:00:24.077861" elapsed="0.000300"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-09-02T16:36:46.398434" level="INFO">@{sample} = [ 1 | 0 | 5 ]</msg>
+<msg time="2025-09-02T17:00:24.078448" level="INFO">@{sample} = [ 4 | 5 | 0 | 3 ]</msg>
 <var>@{sample}</var>
 <arg>random.sample(range(0,${max}), ${sample_size})</arg>
 <arg>random</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-09-02T16:36:46.398262" elapsed="0.000210"/>
+<status status="PASS" start="2025-09-02T17:00:24.078243" elapsed="0.000251"/>
 </kw>
 <return>
 <value>@{sample}</value>
-<status status="PASS" start="2025-09-02T16:36:46.398513" elapsed="0.000040"/>
+<status status="PASS" start="2025-09-02T17:00:24.078543" elapsed="0.000043"/>
 </return>
-<msg time="2025-09-02T16:36:46.398631" level="INFO">@{sample} = [ 1 | 0 | 5 ]</msg>
+<msg time="2025-09-02T17:00:24.078668" level="INFO">@{sample} = [ 4 | 5 | 0 | 3 ]</msg>
 <var>@{sample}</var>
-<status status="PASS" start="2025-09-02T16:36:46.391100" elapsed="0.007562"/>
+<status status="PASS" start="2025-09-02T17:00:24.072537" elapsed="0.006166"/>
 </kw>
 <kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2025-09-02T16:36:46.403067" level="INFO">@{BUTTONS} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="a4e00d99ea953b0cea388c7fac3c268c", element="f.BA297BB305F644908ED99F24167A424D.d.47797383C19A929861707CAE13FCDB6B.e.17")&gt; | &lt;selenium.webdr...</msg>
+<msg time="2025-09-02T17:00:24.082684" level="INFO">@{BUTTONS} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="8b0ca5cd733e47dcbd899ba0d6bf191b", element="f.7EEAE3423D45CD5F619A8AC2FA79023F.d.5424AB6C0E909460EBCE46C9A0A23595.e.12")&gt; | &lt;selenium.webdr...</msg>
 <var>@{BUTTONS}</var>
 <arg>${ADD_TO_CART_BUTTONS}</arg>
 <doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2025-09-02T16:36:46.398731" elapsed="0.004435"/>
+<status status="PASS" start="2025-09-02T17:00:24.078772" elapsed="0.003977"/>
 </kw>
 <for flavor="IN">
 <iter>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-09-02T16:36:46.403658" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="a4e00d99ea953b0cea388c7fac3c268c", element="f.BA297BB305F644908ED99F24167A424D.d.47797383C19A929861707CAE13FCDB6B.e.20")&gt;'.</msg>
+<msg time="2025-09-02T17:00:24.083201" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="8b0ca5cd733e47dcbd899ba0d6bf191b", element="f.7EEAE3423D45CD5F619A8AC2FA79023F.d.5424AB6C0E909460EBCE46C9A0A23595.e.42")&gt;'.</msg>
 <arg>${BUTTONS}[${item_number}]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-02T16:36:46.403503" elapsed="0.017904"/>
+<status status="PASS" start="2025-09-02T17:00:24.083049" elapsed="0.017526"/>
 </kw>
-<var name="${item_number}">1</var>
-<status status="PASS" start="2025-09-02T16:36:46.403401" elapsed="0.018099"/>
+<var name="${item_number}">4</var>
+<status status="PASS" start="2025-09-02T17:00:24.082960" elapsed="0.017726"/>
 </iter>
 <iter>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-09-02T16:36:46.421893" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="a4e00d99ea953b0cea388c7fac3c268c", element="f.BA297BB305F644908ED99F24167A424D.d.47797383C19A929861707CAE13FCDB6B.e.17")&gt;'.</msg>
+<msg time="2025-09-02T17:00:24.101096" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="8b0ca5cd733e47dcbd899ba0d6bf191b", element="f.7EEAE3423D45CD5F619A8AC2FA79023F.d.5424AB6C0E909460EBCE46C9A0A23595.e.47")&gt;'.</msg>
 <arg>${BUTTONS}[${item_number}]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-02T16:36:46.421725" elapsed="0.011742"/>
-</kw>
-<var name="${item_number}">0</var>
-<status status="PASS" start="2025-09-02T16:36:46.421613" elapsed="0.011915"/>
-</iter>
-<iter>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-09-02T16:36:46.433794" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="a4e00d99ea953b0cea388c7fac3c268c", element="f.BA297BB305F644908ED99F24167A424D.d.47797383C19A929861707CAE13FCDB6B.e.49")&gt;'.</msg>
-<arg>${BUTTONS}[${item_number}]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-02T16:36:46.433680" elapsed="0.011329"/>
+<status status="PASS" start="2025-09-02T17:00:24.100922" elapsed="0.013552"/>
 </kw>
 <var name="${item_number}">5</var>
-<status status="PASS" start="2025-09-02T16:36:46.433603" elapsed="0.011476"/>
+<status status="PASS" start="2025-09-02T17:00:24.100806" elapsed="0.013782"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-09-02T17:00:24.114989" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="8b0ca5cd733e47dcbd899ba0d6bf191b", element="f.7EEAE3423D45CD5F619A8AC2FA79023F.d.5424AB6C0E909460EBCE46C9A0A23595.e.12")&gt;'.</msg>
+<arg>${BUTTONS}[${item_number}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-02T17:00:24.114824" elapsed="0.010770"/>
+</kw>
+<var name="${item_number}">0</var>
+<status status="PASS" start="2025-09-02T17:00:24.114702" elapsed="0.010995"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-09-02T17:00:24.126081" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="8b0ca5cd733e47dcbd899ba0d6bf191b", element="f.7EEAE3423D45CD5F619A8AC2FA79023F.d.5424AB6C0E909460EBCE46C9A0A23595.e.37")&gt;'.</msg>
+<arg>${BUTTONS}[${item_number}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-02T17:00:24.125907" elapsed="0.011908"/>
+</kw>
+<var name="${item_number}">3</var>
+<status status="PASS" start="2025-09-02T17:00:24.125799" elapsed="0.012130"/>
 </iter>
 <var>${item_number}</var>
 <value>@{sample}</value>
-<status status="PASS" start="2025-09-02T16:36:46.403251" elapsed="0.041871"/>
+<status status="PASS" start="2025-09-02T17:00:24.082825" elapsed="0.055156"/>
 </for>
 <kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2025-09-02T16:36:46.445324" level="INFO">Clicking link 'css=.shopping_cart_link'.</msg>
+<msg time="2025-09-02T17:00:24.138368" level="INFO">Clicking link 'css=.shopping_cart_link'.</msg>
 <arg>${LINK_SHOPCART}</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-02T16:36:46.445207" elapsed="0.191816"/>
+<status status="PASS" start="2025-09-02T17:00:24.138139" elapsed="0.055769"/>
 </kw>
 <kw name="Wait Until Location Contains" owner="SeleniumLibrary">
 <arg>${URL_CART}</arg>
 <doc>Waits until the current URL contains ``expected``.</doc>
-<status status="PASS" start="2025-09-02T16:36:46.637221" elapsed="0.002017"/>
+<status status="PASS" start="2025-09-02T17:00:24.194013" elapsed="0.002199"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-09-02T16:36:46.695132" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/02_carrinho_de_compras.png"&gt;&lt;img src="screenshots/02_carrinho_de_compras.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-09-02T17:00:24.267423" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/02_carrinho_de_compras.png"&gt;&lt;img src="screenshots/02_carrinho_de_compras.png" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>screenshots/02_carrinho_de_compras.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-09-02T16:36:46.639387" elapsed="0.055930"/>
+<status status="PASS" start="2025-09-02T17:00:24.196398" elapsed="0.071253"/>
 </kw>
-<status status="PASS" start="2025-09-02T16:36:46.390661" elapsed="0.304739"/>
+<status status="PASS" start="2025-09-02T17:00:24.072333" elapsed="0.195405"/>
 </kw>
 <kw name="When Eu confirmo meus dados e solicito a realização da compra">
 <kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2025-09-02T16:36:46.695878" level="INFO">Clicking link 'css=.checkout_button'.</msg>
+<msg time="2025-09-02T17:00:24.268262" level="INFO">Clicking link 'css=.checkout_button'.</msg>
 <arg>${LINK_CHECKOUT}</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-02T16:36:46.695748" elapsed="0.193654"/>
+<status status="PASS" start="2025-09-02T17:00:24.268125" elapsed="0.054236"/>
 </kw>
 <kw name="Wait Until Location Contains" owner="SeleniumLibrary">
 <arg>${URL_CHECKOUT}</arg>
 <doc>Waits until the current URL contains ``expected``.</doc>
-<status status="PASS" start="2025-09-02T16:36:46.889716" elapsed="0.002178"/>
+<status status="PASS" start="2025-09-02T17:00:24.322540" elapsed="0.001759"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-02T16:36:46.892280" level="INFO">Typing text 'Pedro' into text field 'id=first-name'.</msg>
+<msg time="2025-09-02T17:00:24.324531" level="INFO">Typing text 'Pedro' into text field 'id=first-name'.</msg>
 <arg>${INPUT_FIRSTNAME}</arg>
 <arg>${FIRSTNAME}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-02T16:36:46.892043" elapsed="0.024992"/>
+<status status="PASS" start="2025-09-02T17:00:24.324387" elapsed="0.026079"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-02T16:36:46.917427" level="INFO">Typing text 'Ribeiro' into text field 'id=last-name'.</msg>
+<msg time="2025-09-02T17:00:24.350852" level="INFO">Typing text 'Ribeiro' into text field 'id=last-name'.</msg>
 <arg>${INPUT_LASTNAME}</arg>
 <arg>${LASTNAME}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-02T16:36:46.917223" elapsed="0.020238"/>
+<status status="PASS" start="2025-09-02T17:00:24.350647" elapsed="0.017853"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-02T16:36:46.937840" level="INFO">Typing text '8806355' into text field 'id=postal-code'.</msg>
+<msg time="2025-09-02T17:00:24.368884" level="INFO">Typing text '8806355' into text field 'id=postal-code'.</msg>
 <arg>${INPUT_ZIPCODE}</arg>
 <arg>${ZIPCODE}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-02T16:36:46.937636" elapsed="0.019013"/>
+<status status="PASS" start="2025-09-02T17:00:24.368685" elapsed="0.024121"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-09-02T16:36:46.957029" level="INFO">Clicking button 'css=.cart_button[value="CONTINUE"]'.</msg>
+<msg time="2025-09-02T17:00:24.393169" level="INFO">Clicking button 'css=.cart_button[value="CONTINUE"]'.</msg>
 <arg>${BUTTON_CONTINUE}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-02T16:36:46.956833" elapsed="0.246044"/>
+<status status="PASS" start="2025-09-02T17:00:24.392976" elapsed="0.058825"/>
 </kw>
 <kw name="Wait Until Location Contains" owner="SeleniumLibrary">
 <arg>${URL_CHECKOUT_OVERVIEW}</arg>
 <doc>Waits until the current URL contains ``expected``.</doc>
-<status status="PASS" start="2025-09-02T16:36:47.203068" elapsed="0.001702"/>
+<status status="PASS" start="2025-09-02T17:00:24.452001" elapsed="0.001897"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${TOTAL_LABEL}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-09-02T16:36:47.204989" elapsed="0.006247"/>
+<status status="PASS" start="2025-09-02T17:00:24.454080" elapsed="0.006909"/>
 </kw>
 <kw name="Scroll Element Into View" owner="SeleniumLibrary">
 <arg>${TOTAL_LABEL}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2025-09-02T16:36:47.211355" elapsed="0.255382"/>
+<status status="PASS" start="2025-09-02T17:00:24.461126" elapsed="0.255819"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-09-02T16:36:47.553501" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/03_resumo_de_compra.png"&gt;&lt;img src="screenshots/03_resumo_de_compra.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-09-02T17:00:24.817026" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/03_resumo_de_compra.png"&gt;&lt;img src="screenshots/03_resumo_de_compra.png" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>screenshots/03_resumo_de_compra.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-09-02T16:36:47.466917" elapsed="0.086753"/>
+<status status="PASS" start="2025-09-02T17:00:24.717148" elapsed="0.100048"/>
 </kw>
-<status status="PASS" start="2025-09-02T16:36:46.695569" elapsed="0.858178"/>
+<status status="PASS" start="2025-09-02T17:00:24.267923" elapsed="0.549352"/>
 </kw>
 <kw name="Then Eu verifico se o valor total corresponde aos subtotais de cada produto, mais taxas">
 <kw name="Obter Preço Via Elemento" owner="carrinho-de-compras">
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-09-02T16:36:47.560656" level="INFO">${text} = Total: $60.45</msg>
+<msg time="2025-09-02T17:00:24.824059" level="INFO">${text} = Total: $112.28</msg>
 <var>${text}</var>
 <arg>${locator}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-02T16:36:47.554336" elapsed="0.006407"/>
+<status status="PASS" start="2025-09-02T17:00:24.817815" elapsed="0.006325"/>
 </kw>
 <kw name="Get Regexp Matches" owner="String">
-<msg time="2025-09-02T16:36:47.561034" level="INFO">${matches} = ['60.45']</msg>
+<msg time="2025-09-02T17:00:24.824421" level="INFO">${matches} = ['112.28']</msg>
 <var>${matches}</var>
 <arg>${text}</arg>
 <arg>[0-9]+\.[0-9]+</arg>
 <doc>Returns a list of all non-overlapping matches in the given string.</doc>
-<status status="PASS" start="2025-09-02T16:36:47.560840" elapsed="0.000241"/>
+<status status="PASS" start="2025-09-02T17:00:24.824232" elapsed="0.000231"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-09-02T16:36:47.561249" level="INFO">${amount} = 60.45</msg>
+<msg time="2025-09-02T17:00:24.824630" level="INFO">${amount} = 112.28</msg>
 <var>${amount}</var>
 <arg>${matches}[0]</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-09-02T16:36:47.561149" elapsed="0.000136"/>
+<status status="PASS" start="2025-09-02T17:00:24.824528" elapsed="0.000138"/>
 </kw>
 <kw name="Convert To Number" owner="BuiltIn">
-<msg time="2025-09-02T16:36:47.561448" level="INFO">${amount} = 60.45</msg>
+<msg time="2025-09-02T17:00:24.824826" level="INFO">${amount} = 112.28</msg>
 <var>${amount}</var>
 <arg>${amount}</arg>
 <doc>Converts the given item to a floating point number.</doc>
-<status status="PASS" start="2025-09-02T16:36:47.561346" elapsed="0.000134"/>
+<status status="PASS" start="2025-09-02T17:00:24.824723" elapsed="0.000135"/>
 </kw>
 <return>
 <value>${amount}</value>
-<status status="PASS" start="2025-09-02T16:36:47.561518" elapsed="0.000042"/>
+<status status="PASS" start="2025-09-02T17:00:24.824896" elapsed="0.000042"/>
 </return>
-<msg time="2025-09-02T16:36:47.561630" level="INFO">${captured_total} = 60.45</msg>
+<msg time="2025-09-02T17:00:24.825010" level="INFO">${captured_total} = 112.28</msg>
 <var>${captured_total}</var>
 <arg>${TOTAL_LABEL}</arg>
-<status status="PASS" start="2025-09-02T16:36:47.554180" elapsed="0.007482"/>
+<status status="PASS" start="2025-09-02T17:00:24.817662" elapsed="0.007386"/>
 </kw>
 <kw name="Obter Todos Os Preços" owner="carrinho-de-compras">
 <kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2025-09-02T16:36:47.564940" level="INFO">${elements_1} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="a4e00d99ea953b0cea388c7fac3c268c", element="f.BA297BB305F644908ED99F24167A424D.d.74754B0486DF6C1EDCB8E99DD6FFD277.e.78")&gt;, &lt;selenium.webdriv...</msg>
+<msg time="2025-09-02T17:00:24.828524" level="INFO">${elements_1} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="8b0ca5cd733e47dcbd899ba0d6bf191b", element="f.7EEAE3423D45CD5F619A8AC2FA79023F.d.9DDD0539E8A61F7B78DCB75C8A856FAF.e.76")&gt;, &lt;selenium.webdriv...</msg>
 <var>${elements_1}</var>
-<arg>${ITEM_PRICES}</arg>
+<arg>${locator_1}</arg>
 <doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2025-09-02T16:36:47.561891" elapsed="0.003120"/>
+<status status="PASS" start="2025-09-02T17:00:24.825313" elapsed="0.003292"/>
 </kw>
 <kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2025-09-02T16:36:47.568845" level="INFO">${elements_2} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="a4e00d99ea953b0cea388c7fac3c268c", element="f.BA297BB305F644908ED99F24167A424D.d.74754B0486DF6C1EDCB8E99DD6FFD277.e.81")&gt;]</msg>
+<msg time="2025-09-02T17:00:24.832034" level="INFO">${elements_2} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="8b0ca5cd733e47dcbd899ba0d6bf191b", element="f.7EEAE3423D45CD5F619A8AC2FA79023F.d.9DDD0539E8A61F7B78DCB75C8A856FAF.e.80")&gt;]</msg>
 <var>${elements_2}</var>
-<arg>${TAX_LABEL}</arg>
+<arg>${locator_2}</arg>
 <doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2025-09-02T16:36:47.565100" elapsed="0.003878"/>
+<status status="PASS" start="2025-09-02T17:00:24.828702" elapsed="0.003430"/>
 </kw>
 <kw name="Combine Lists" owner="Collections">
-<msg time="2025-09-02T16:36:47.569403" level="INFO">${elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="a4e00d99ea953b0cea388c7fac3c268c", element="f.BA297BB305F644908ED99F24167A424D.d.74754B0486DF6C1EDCB8E99DD6FFD277.e.78")&gt;, &lt;selenium.webdriv...</msg>
+<msg time="2025-09-02T17:00:24.832362" level="INFO">${elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="8b0ca5cd733e47dcbd899ba0d6bf191b", element="f.7EEAE3423D45CD5F619A8AC2FA79023F.d.9DDD0539E8A61F7B78DCB75C8A856FAF.e.76")&gt;, &lt;selenium.webdriv...</msg>
 <var>${elements}</var>
 <arg>${elements_1}</arg>
 <arg>${elements_2}</arg>
 <doc>Combines the given ``lists`` together and returns the result.</doc>
-<status status="PASS" start="2025-09-02T16:36:47.569195" elapsed="0.000275"/>
+<status status="PASS" start="2025-09-02T17:00:24.832222" elapsed="0.000187"/>
 </kw>
 <kw name="Create List" owner="BuiltIn">
-<msg time="2025-09-02T16:36:47.569638" level="INFO">${prices} = []</msg>
+<msg time="2025-09-02T17:00:24.832551" level="INFO">${prices} = []</msg>
 <var>${prices}</var>
 <doc>Returns a list containing given items.</doc>
-<status status="PASS" start="2025-09-02T16:36:47.569547" elapsed="0.000132"/>
+<status status="PASS" start="2025-09-02T17:00:24.832475" elapsed="0.000112"/>
 </kw>
 <for flavor="IN">
 <iter>
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-09-02T16:36:47.572866" level="INFO">${text} = $9.99</msg>
+<msg time="2025-09-02T17:00:24.835373" level="INFO">${text} = $7.99</msg>
 <var>${text}</var>
 <arg>${el}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-02T16:36:47.569924" elapsed="0.003026"/>
+<status status="PASS" start="2025-09-02T17:00:24.832816" elapsed="0.002629"/>
 </kw>
 <kw name="Get Regexp Matches" owner="String">
-<msg time="2025-09-02T16:36:47.573171" level="INFO">${matches} = ['9.99']</msg>
+<msg time="2025-09-02T17:00:24.835662" level="INFO">${matches} = ['7.99']</msg>
 <var>${matches}</var>
 <arg>${text}</arg>
 <arg>[0-9]+\.[0-9]+</arg>
 <doc>Returns a list of all non-overlapping matches in the given string.</doc>
-<status status="PASS" start="2025-09-02T16:36:47.573036" elapsed="0.000179"/>
+<status status="PASS" start="2025-09-02T17:00:24.835532" elapsed="0.000171"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-09-02T16:36:47.573380" level="INFO">${amount} = 9.99</msg>
+<msg time="2025-09-02T17:00:24.835962" level="INFO">${amount} = 7.99</msg>
 <var>${amount}</var>
 <arg>${matches}[0]</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-09-02T16:36:47.573283" elapsed="0.000136"/>
+<status status="PASS" start="2025-09-02T17:00:24.835832" elapsed="0.000176"/>
 </kw>
 <kw name="Convert To Number" owner="BuiltIn">
-<msg time="2025-09-02T16:36:47.573582" level="INFO">${amount} = 9.99</msg>
+<msg time="2025-09-02T17:00:24.836186" level="INFO">${amount} = 7.99</msg>
 <var>${amount}</var>
 <arg>${amount}</arg>
 <doc>Converts the given item to a floating point number.</doc>
-<status status="PASS" start="2025-09-02T16:36:47.573480" elapsed="0.000135"/>
+<status status="PASS" start="2025-09-02T17:00:24.836080" elapsed="0.000140"/>
 </kw>
 <kw name="Append To List" owner="Collections">
 <arg>${prices}</arg>
 <arg>${amount}</arg>
 <doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-09-02T16:36:47.573753" elapsed="0.000123"/>
+<status status="PASS" start="2025-09-02T17:00:24.836279" elapsed="0.000084"/>
 </kw>
-<var name="${el}">&lt;selenium.webdriver.remote.webelement.WebElement (session="a4e00d99ea953b0cea388c7fac3c268c", element="f.BA297BB305F644908ED99F24167A424D.d.74754B0486DF6C1EDCB8E99DD6FFD277.e.78")&gt;</var>
-<status status="PASS" start="2025-09-02T16:36:47.569849" elapsed="0.004065"/>
+<var name="${el}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8b0ca5cd733e47dcbd899ba0d6bf191b", element="f.7EEAE3423D45CD5F619A8AC2FA79023F.d.9DDD0539E8A61F7B78DCB75C8A856FAF.e.76")&gt;</var>
+<status status="PASS" start="2025-09-02T17:00:24.832748" elapsed="0.003649"/>
 </iter>
 <iter>
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-09-02T16:36:47.576678" level="INFO">${text} = $29.99</msg>
+<msg time="2025-09-02T17:00:24.838605" level="INFO">${text} = $15.99</msg>
 <var>${text}</var>
 <arg>${el}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-02T16:36:47.574074" elapsed="0.002670"/>
+<status status="PASS" start="2025-09-02T17:00:24.836541" elapsed="0.002124"/>
 </kw>
 <kw name="Get Regexp Matches" owner="String">
-<msg time="2025-09-02T16:36:47.576951" level="INFO">${matches} = ['29.99']</msg>
+<msg time="2025-09-02T17:00:24.838851" level="INFO">${matches} = ['15.99']</msg>
 <var>${matches}</var>
 <arg>${text}</arg>
 <arg>[0-9]+\.[0-9]+</arg>
 <doc>Returns a list of all non-overlapping matches in the given string.</doc>
-<status status="PASS" start="2025-09-02T16:36:47.576826" elapsed="0.000170"/>
+<status status="PASS" start="2025-09-02T17:00:24.838740" elapsed="0.000149"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-09-02T16:36:47.577166" level="INFO">${amount} = 29.99</msg>
+<msg time="2025-09-02T17:00:24.839100" level="INFO">${amount} = 15.99</msg>
 <var>${amount}</var>
 <arg>${matches}[0]</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-09-02T16:36:47.577069" elapsed="0.000136"/>
+<status status="PASS" start="2025-09-02T17:00:24.838985" elapsed="0.000156"/>
 </kw>
 <kw name="Convert To Number" owner="BuiltIn">
-<msg time="2025-09-02T16:36:47.577367" level="INFO">${amount} = 29.99</msg>
+<msg time="2025-09-02T17:00:24.839300" level="INFO">${amount} = 15.99</msg>
 <var>${amount}</var>
 <arg>${amount}</arg>
 <doc>Converts the given item to a floating point number.</doc>
-<status status="PASS" start="2025-09-02T16:36:47.577268" elapsed="0.000133"/>
+<status status="PASS" start="2025-09-02T17:00:24.839204" elapsed="0.000129"/>
 </kw>
 <kw name="Append To List" owner="Collections">
 <arg>${prices}</arg>
 <arg>${amount}</arg>
 <doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-09-02T16:36:47.577459" elapsed="0.000082"/>
+<status status="PASS" start="2025-09-02T17:00:24.839389" elapsed="0.000078"/>
 </kw>
-<var name="${el}">&lt;selenium.webdriver.remote.webelement.WebElement (session="a4e00d99ea953b0cea388c7fac3c268c", element="f.BA297BB305F644908ED99F24167A424D.d.74754B0486DF6C1EDCB8E99DD6FFD277.e.79")&gt;</var>
-<status status="PASS" start="2025-09-02T16:36:47.573996" elapsed="0.003578"/>
+<var name="${el}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8b0ca5cd733e47dcbd899ba0d6bf191b", element="f.7EEAE3423D45CD5F619A8AC2FA79023F.d.9DDD0539E8A61F7B78DCB75C8A856FAF.e.77")&gt;</var>
+<status status="PASS" start="2025-09-02T17:00:24.836476" elapsed="0.003024"/>
 </iter>
 <iter>
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-09-02T16:36:47.580530" level="INFO">${text} = $15.99</msg>
+<msg time="2025-09-02T17:00:24.841454" level="INFO">${text} = $29.99</msg>
 <var>${text}</var>
 <arg>${el}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-02T16:36:47.577710" elapsed="0.002881"/>
+<status status="PASS" start="2025-09-02T17:00:24.839633" elapsed="0.001878"/>
 </kw>
 <kw name="Get Regexp Matches" owner="String">
-<msg time="2025-09-02T16:36:47.580780" level="INFO">${matches} = ['15.99']</msg>
+<msg time="2025-09-02T17:00:24.841688" level="INFO">${matches} = ['29.99']</msg>
 <var>${matches}</var>
 <arg>${text}</arg>
 <arg>[0-9]+\.[0-9]+</arg>
 <doc>Returns a list of all non-overlapping matches in the given string.</doc>
-<status status="PASS" start="2025-09-02T16:36:47.580667" elapsed="0.000152"/>
+<status status="PASS" start="2025-09-02T17:00:24.841583" elapsed="0.000143"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-09-02T16:36:47.580968" level="INFO">${amount} = 15.99</msg>
+<msg time="2025-09-02T17:00:24.841924" level="INFO">${amount} = 29.99</msg>
 <var>${amount}</var>
 <arg>${matches}[0]</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-09-02T16:36:47.580881" elapsed="0.000121"/>
+<status status="PASS" start="2025-09-02T17:00:24.841786" elapsed="0.000186"/>
 </kw>
 <kw name="Convert To Number" owner="BuiltIn">
-<msg time="2025-09-02T16:36:47.581152" level="INFO">${amount} = 15.99</msg>
+<msg time="2025-09-02T17:00:24.842144" level="INFO">${amount} = 29.99</msg>
 <var>${amount}</var>
 <arg>${amount}</arg>
 <doc>Converts the given item to a floating point number.</doc>
-<status status="PASS" start="2025-09-02T16:36:47.581063" elapsed="0.000120"/>
+<status status="PASS" start="2025-09-02T17:00:24.842040" elapsed="0.000138"/>
 </kw>
 <kw name="Append To List" owner="Collections">
 <arg>${prices}</arg>
 <arg>${amount}</arg>
 <doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-09-02T16:36:47.581236" elapsed="0.000075"/>
+<status status="PASS" start="2025-09-02T17:00:24.842234" elapsed="0.000080"/>
 </kw>
-<var name="${el}">&lt;selenium.webdriver.remote.webelement.WebElement (session="a4e00d99ea953b0cea388c7fac3c268c", element="f.BA297BB305F644908ED99F24167A424D.d.74754B0486DF6C1EDCB8E99DD6FFD277.e.80")&gt;</var>
-<status status="PASS" start="2025-09-02T16:36:47.577646" elapsed="0.003697"/>
+<var name="${el}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8b0ca5cd733e47dcbd899ba0d6bf191b", element="f.7EEAE3423D45CD5F619A8AC2FA79023F.d.9DDD0539E8A61F7B78DCB75C8A856FAF.e.78")&gt;</var>
+<status status="PASS" start="2025-09-02T17:00:24.839571" elapsed="0.002776"/>
 </iter>
 <iter>
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-09-02T16:36:47.584092" level="INFO">${text} = Tax: $4.48</msg>
+<msg time="2025-09-02T17:00:24.845677" level="INFO">${text} = $49.99</msg>
 <var>${text}</var>
 <arg>${el}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-02T16:36:47.581473" elapsed="0.002678"/>
+<status status="PASS" start="2025-09-02T17:00:24.842489" elapsed="0.003285"/>
 </kw>
 <kw name="Get Regexp Matches" owner="String">
-<msg time="2025-09-02T16:36:47.584483" level="INFO">${matches} = ['4.48']</msg>
+<msg time="2025-09-02T17:00:24.846030" level="INFO">${matches} = ['49.99']</msg>
 <var>${matches}</var>
 <arg>${text}</arg>
 <arg>[0-9]+\.[0-9]+</arg>
 <doc>Returns a list of all non-overlapping matches in the given string.</doc>
-<status status="PASS" start="2025-09-02T16:36:47.584225" elapsed="0.000431"/>
+<status status="PASS" start="2025-09-02T17:00:24.845885" elapsed="0.000193"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-09-02T16:36:47.584989" level="INFO">${amount} = 4.48</msg>
+<msg time="2025-09-02T17:00:24.846242" level="INFO">${amount} = 49.99</msg>
 <var>${amount}</var>
 <arg>${matches}[0]</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-09-02T16:36:47.584823" elapsed="0.000232"/>
+<status status="PASS" start="2025-09-02T17:00:24.846146" elapsed="0.000134"/>
 </kw>
 <kw name="Convert To Number" owner="BuiltIn">
-<msg time="2025-09-02T16:36:47.585321" level="INFO">${amount} = 4.48</msg>
+<msg time="2025-09-02T17:00:24.846436" level="INFO">${amount} = 49.99</msg>
 <var>${amount}</var>
 <arg>${amount}</arg>
 <doc>Converts the given item to a floating point number.</doc>
-<status status="PASS" start="2025-09-02T16:36:47.585186" elapsed="0.000181"/>
+<status status="PASS" start="2025-09-02T17:00:24.846340" elapsed="0.000130"/>
 </kw>
 <kw name="Append To List" owner="Collections">
 <arg>${prices}</arg>
 <arg>${amount}</arg>
 <doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-09-02T16:36:47.585432" elapsed="0.000091"/>
+<status status="PASS" start="2025-09-02T17:00:24.846526" elapsed="0.000085"/>
 </kw>
-<var name="${el}">&lt;selenium.webdriver.remote.webelement.WebElement (session="a4e00d99ea953b0cea388c7fac3c268c", element="f.BA297BB305F644908ED99F24167A424D.d.74754B0486DF6C1EDCB8E99DD6FFD277.e.81")&gt;</var>
-<status status="PASS" start="2025-09-02T16:36:47.581413" elapsed="0.004145"/>
+<var name="${el}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8b0ca5cd733e47dcbd899ba0d6bf191b", element="f.7EEAE3423D45CD5F619A8AC2FA79023F.d.9DDD0539E8A61F7B78DCB75C8A856FAF.e.79")&gt;</var>
+<status status="PASS" start="2025-09-02T17:00:24.842420" elapsed="0.004224"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-09-02T17:00:24.849545" level="INFO">${text} = Tax: $8.32</msg>
+<var>${text}</var>
+<arg>${el}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-02T17:00:24.846793" elapsed="0.002819"/>
+</kw>
+<kw name="Get Regexp Matches" owner="String">
+<msg time="2025-09-02T17:00:24.849813" level="INFO">${matches} = ['8.32']</msg>
+<var>${matches}</var>
+<arg>${text}</arg>
+<arg>[0-9]+\.[0-9]+</arg>
+<doc>Returns a list of all non-overlapping matches in the given string.</doc>
+<status status="PASS" start="2025-09-02T17:00:24.849693" elapsed="0.000163"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-09-02T17:00:24.850014" level="INFO">${amount} = 8.32</msg>
+<var>${amount}</var>
+<arg>${matches}[0]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-09-02T17:00:24.849922" elapsed="0.000132"/>
+</kw>
+<kw name="Convert To Number" owner="BuiltIn">
+<msg time="2025-09-02T17:00:24.850207" level="INFO">${amount} = 8.32</msg>
+<var>${amount}</var>
+<arg>${amount}</arg>
+<doc>Converts the given item to a floating point number.</doc>
+<status status="PASS" start="2025-09-02T17:00:24.850113" elapsed="0.000127"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${prices}</arg>
+<arg>${amount}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-09-02T17:00:24.850296" elapsed="0.000077"/>
+</kw>
+<var name="${el}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8b0ca5cd733e47dcbd899ba0d6bf191b", element="f.7EEAE3423D45CD5F619A8AC2FA79023F.d.9DDD0539E8A61F7B78DCB75C8A856FAF.e.80")&gt;</var>
+<status status="PASS" start="2025-09-02T17:00:24.846729" elapsed="0.003728"/>
 </iter>
 <var>${el}</var>
 <value>@{elements}</value>
-<status status="PASS" start="2025-09-02T16:36:47.569731" elapsed="0.015869"/>
+<status status="PASS" start="2025-09-02T17:00:24.832636" elapsed="0.017920"/>
 </for>
 <return>
 <value>${prices}</value>
-<status status="PASS" start="2025-09-02T16:36:47.585654" elapsed="0.000043"/>
+<status status="PASS" start="2025-09-02T17:00:24.850627" elapsed="0.000051"/>
 </return>
-<msg time="2025-09-02T16:36:47.585773" level="INFO">${prices} = [9.99, 29.99, 15.99, 4.48]</msg>
+<msg time="2025-09-02T17:00:24.850764" level="INFO">${prices} = [7.99, 15.99, 29.99, 49.99, 8.32]</msg>
 <var>${prices}</var>
-<status status="PASS" start="2025-09-02T16:36:47.561773" elapsed="0.024040"/>
+<arg>${ITEM_PRICES}</arg>
+<arg>${TAX_LABEL}</arg>
+<status status="PASS" start="2025-09-02T17:00:24.825161" elapsed="0.025646"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-09-02T16:36:47.586025" level="INFO">${calculated_total} = 60.45</msg>
+<msg time="2025-09-02T17:00:24.851031" level="INFO">${calculated_total} = 112.28</msg>
 <var>${calculated_total}</var>
 <arg>sum(${prices})</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-09-02T16:36:47.585879" elapsed="0.000189"/>
+<status status="PASS" start="2025-09-02T17:00:24.850878" elapsed="0.000196"/>
 </kw>
 <kw name="Should Be Equal As Numbers" owner="BuiltIn">
 <arg>${calculated_total}</arg>
 <arg>${captured_total}</arg>
 <doc>Fails if objects are unequal after converting them to real numbers.</doc>
-<status status="PASS" start="2025-09-02T16:36:47.586129" elapsed="0.000111"/>
+<status status="PASS" start="2025-09-02T17:00:24.851136" elapsed="0.000111"/>
 </kw>
-<status status="PASS" start="2025-09-02T16:36:47.553963" elapsed="0.032328"/>
+<status status="PASS" start="2025-09-02T17:00:24.817464" elapsed="0.033828"/>
 </kw>
 <kw name="Then Após a confirmação final, eu vejo uma mensagem de sucesso informando que a compra foi realizada">
 <kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2025-09-02T16:36:47.586943" level="INFO">Clicking link 'css=a.cart_button'.</msg>
+<msg time="2025-09-02T17:00:24.851631" level="INFO">Clicking link 'css=a.cart_button'.</msg>
 <arg>${LINK_FINISH}</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-02T16:36:47.586574" elapsed="0.342483"/>
+<status status="PASS" start="2025-09-02T17:00:24.851538" elapsed="0.070146"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${SUCCESS_DIV}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-09-02T16:36:47.929234" elapsed="0.005788"/>
+<status status="PASS" start="2025-09-02T17:00:24.921867" elapsed="0.007807"/>
 </kw>
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-09-02T16:36:47.939913" level="INFO">${success_text} = THANK YOU FOR YOUR ORDER</msg>
+<msg time="2025-09-02T17:00:24.936225" level="INFO">${success_text} = THANK YOU FOR YOUR ORDER</msg>
 <var>${success_text}</var>
 <arg>${SUCCESS_MESSAGE}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-02T16:36:47.935183" elapsed="0.004820"/>
+<status status="PASS" start="2025-09-02T17:00:24.929927" elapsed="0.006397"/>
 </kw>
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
 <arg>${success_text}</arg>
 <arg>THANK YOU FOR YOUR ORDER</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2025-09-02T16:36:47.940161" elapsed="0.000139"/>
+<status status="PASS" start="2025-09-02T17:00:24.936436" elapsed="0.000150"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2025-09-02T16:36:47.988285" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/04_compra_realizada_com_sucesso.png"&gt;&lt;img src="screenshots/04_compra_realizada_com_sucesso.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-09-02T17:00:24.986999" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/04_compra_realizada_com_sucesso.png"&gt;&lt;img src="screenshots/04_compra_realizada_com_sucesso.png" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>screenshots/04_compra_realizada_com_sucesso.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2025-09-02T16:36:47.940373" elapsed="0.048091"/>
+<status status="PASS" start="2025-09-02T17:00:24.936659" elapsed="0.050544"/>
 </kw>
-<status status="PASS" start="2025-09-02T16:36:47.586443" elapsed="0.402101"/>
+<status status="PASS" start="2025-09-02T17:00:24.851412" elapsed="0.135875"/>
 </kw>
 <doc>Adiciona produtos e realiza compra com sucesso</doc>
-<status status="PASS" start="2025-09-02T16:36:45.470326" elapsed="2.518356"/>
+<status status="PASS" start="2025-09-02T17:00:23.293864" elapsed="1.693581"/>
 </test>
-<status status="PASS" start="2025-09-02T16:36:45.413031" elapsed="2.575992"/>
+<status status="PASS" start="2025-09-02T17:00:23.237505" elapsed="1.750251"/>
 </suite>
 <statistics>
 <total>

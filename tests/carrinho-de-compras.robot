@@ -54,7 +54,7 @@ Eu confirmo meus dados e solicito a realização da compra
 
 Eu verifico se o valor total corresponde aos subtotais de cada produto, mais taxas
     ${captured_total}        Obter Preço Via Elemento          ${TOTAL_LABEL}
-    ${prices}                Obter Todos Os Preços
+    ${prices}                Obter Todos Os Preços             ${ITEM_PRICES}         ${TAX_LABEL} 
     ${calculated_total}      Evaluate                          sum(${prices})            
                              Should Be Equal As Numbers        ${calculated_total}    ${captured_total}
 
