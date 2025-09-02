@@ -53,10 +53,10 @@ Eu confirmo meus dados e solicito a realização da compra
     Capture Page Screenshot         screenshots/03_resumo_de_compra.png
 
 Eu verifico se o valor total corresponde aos subtotais de cada produto, mais taxas
-    ${captured_total}        Obter Preço Via Elemento          ${TOTAL_LABEL}
-    ${prices}                Obter Todos Os Preços             ${ITEM_PRICES}         ${TAX_LABEL} 
-    ${calculated_total}      Evaluate                          sum(${prices})            
-                             Should Be Equal As Numbers        ${calculated_total}    ${captured_total}
+    ${captured_total}               Obter Preço Via Elemento          ${TOTAL_LABEL}
+    ${prices}                       Obter Todos Os Preços             ${ITEM_PRICES}         ${TAX_LABEL} 
+    ${calculated_total}             Evaluate                          sum(${prices})            
+                                    Should Be Equal As Numbers        ${calculated_total}    ${captured_total}
 
 Após a confirmação final, eu vejo uma mensagem de sucesso informando que a compra foi realizada
     Click Link                      ${LINK_FINISH}
