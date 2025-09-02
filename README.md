@@ -6,7 +6,10 @@ This is a demo test automation script using Robot Framework. It showcases a few 
 - Adds random sample to cart
 - Programatically ensures total price matches sum of individual item prices, plus tax
 
-Developed in collaboration with [Coti Informática](http://cotiinformatica.com.br).
+## Authorship
+
+- Developed in collaboration with [Coti Informática](http://cotiinformatica.com.br).
+- Uses https://www.saucedemo.com/v1/inventory.html as a test automation playground.
 
 ## To do
 
