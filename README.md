@@ -16,6 +16,3 @@ This is a demo test automation script using Robot Framework and showcasing a few
 
 - Fully translate to English
 - Code sanitization
-
-- Fully translate to English
-- Code sanitization
