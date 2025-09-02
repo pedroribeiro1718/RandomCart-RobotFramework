@@ -5,6 +5,7 @@ This is a demo test automation script using Robot Framework and showcasing a few
 - Randomly samples a subset of store items
 - Adds random sample to cart
 - Programatically ensures total price matches sum of individual item prices, plus tax
+- BDD with Gherkin
 
 ## Authorship
 
